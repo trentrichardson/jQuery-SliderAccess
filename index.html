@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Adding Touch Accessibility to jQueryUI Slider</title> 
+		<meta name="Description" content="Add accessibility to jQueryUI slider wigits with SliderAccess." />
+		<meta name="Keywords" content="jQuery, UI, slider, touch, phone, accessibility" />
+		
+		<style type="text/css"> 
+			body,img,p,h1,h2,h3,h4,h5,h6,form,table,td,ul,ol,li,dl,dt,dd,pre,blockquote,fieldset,label{
+				margin:0;
+				padding:0;
+				border:0;
+			}
+			body{ background-color: #777; border-top: solid 10px #7b94b2; font: 90% Arial, Helvetica, sans-serif; padding: 20px; }
+			h1,h2,h3{ margin: 10px 0; }
+			h1{}
+			h2{ color: #f66; }
+			h3{ color: #6b84a2; }
+			p{ margin: 10px 0; }
+			a{ color: #7b94b2; }
+			ul,ol{ margin: 10px 0 10px 40px; }
+			li{ margin: 4px 0; }
+			dl.defs{ margin: 10px 0 10px 0; }
+			dl.defs dt{ font-weight: bold; line-height: 20px; margin: 10px 0 0 0; }
+			dl.defs dd{ margin: -20px 0 10px 140px; padding-bottom: 10px; border-bottom: solid 1px #eee;}
+			pre{ font-size: 12px; line-height: 16px; padding: 5px 5px 5px 10px; margin: 10px 0; background-color: #e4f4d4; border-left: solid 5px #9EC45F; overflow: auto; }
+			section{ padding: 10px 0 10px 40px; }
+			section h2{ margin-left: -40px; }
+			section h3{ margin-left: -20px; }
+			section a{ color: #333; }
+			.wrapper{ background-color: #ffffff; width: 800px; border: solid 1px #eeeeee; padding: 20px; margin: 0 auto; }
+			.clear{ clear: both; }
+			
+			.example-container{ background-color: #f4f4f4; border-bottom: solid 2px #777777; margin: 0 0 20px 0; padding: 20px; }
+			.example-container input{ border: solid 1px #aaa; padding: 4px; width: 175px; }
+		</style> 
+		
+		<link rel="stylesheet" media="all" type="text/css" href="http://code.jquery.com/ui/1.8.23/themes/smoothness/jquery-ui.css" />
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.8.23/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="jquery-ui-sliderAccess.js"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+		
+				$('.example-container > pre').each(function(i){
+					eval($(this).text());
+				});
+			});
+			
+		</script>
+	</head> 
+	<body> 
+		<div class="wrapper">
+			<h1>Add Touch Accessibility to jQueryUI Slider</h1> 
+			
+			<p>The jQueryUI Slider wigit can be difficult to use on touch devices.  It makes it much easier if there is a button to press which adjusts the slider.  jQueryUI SliderAccess easily adds this functionality.</p>
+			
+			<p>If you are interested in contributing to SliderAccess please <a href="http://github.com/trentrichardson/jQuery-Timepicker-Addon" title="Check out Timepicker on GitHub">check it out on GitHub</a>.  If you do make additions please keep in mind I enjoy tabs over spaces,.. But contributions are welcome in any form.</p>
+			
+			<p><a href="http://trentrichardson.com" title="Back to Blog">Back to Blog</a> or <a href="http://twitter.com/practicalweb" title="Follow Me on Twitter">Follow on Twitter</a></p>
+		
+			
+			<section>
+				<h2>Donation</h2>
+				<a href="http://carbounce.com" title="Car Bounce" style="float: right;display: inline-block;width:380px;padding: 10px;background-color: #fbfbfb;border: dotted 4px #e8e8e8;color: #9EC45F;font-size: 16px;text-decoration:none;letter-spacing:1px;"><img src="http://carbounce.com/img/logo_small.png" alt="Car Bounce" align="left" style="margin-right: 20px;"/>Try my new app to keep you informed of your car's financing status and value.</a>	
+
+				<p>Has this Timepicker Addon been helpful to you?</p>
+				<div class="donation">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="C2QQHR7JQGD28">
+					<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form>
+				</div>
+			</section>
+			
+
+				<!-- ############################################################################# -->
+				<!-- Getting Started
+				<!-- ############################################################################# -->
+				<section>
+					<h2>Getting Started</h2>
+					
+					<h3>Highly Recommended</h3>
+					<p><a href="http://trentrichardson.com" title="Subscribe to TrentRichardson.com via email">Subscribe to my blog via email</a> and follow <a href="http://twitter.com/practicalweb" title="Follow Me on Twitter">@PracticalWeb</a> on Twitter.  I post for nearly every new version, so you know about updates.</p>
+
+					<h3>Download</h3>
+					<p><a href="http://github.com/trentrichardson/jQuery-Timepicker-Addon" title="Check out Timepicker on GitHub">Download/Contribute on GitHub</a> (Need the entire repo? Find a bug? See if its fixed here)</p>
+										
+					<h3>Requirements</h3>
+					<p>You also need to include jQuery and jQuery UI with datepicker and slider wigits. You should include them in your page in the following order:</p>
+					<ol>
+						<li>jQuery</li>
+						<li>jQueryUI (with slider and button wigits)</li>
+					</ol>
+
+					
+					<h3>Version</h3>
+					<p>Version 0.2</p>
+
+					<p>Last updated on 09/22/2012</p>
+					<p>jQuery UI Slider Access is currently available for use in all personal or commercial projects under both MIT and GPL licenses. This means that you can choose the license that best suits your project, and use it accordingly. </p>
+					<p><a href="http://trentrichardson.com/Impromptu/GPL-LICENSE.txt" title="GPL License">GPL License</a></p>
+					<p><a href="http://trentrichardson.com/Impromptu/MIT-LICENSE.txt" title="MIT License">MIT License</a></p>
+
+				</section>
+
+				<!-- ############################################################################# -->
+				<!-- Options
+				<!-- ############################################################################# -->
+				<section>
+					<h2>Options</h2>
+
+					<p>SliderAccess has several options to customize it's appearance and functionality:</p>
+
+					<dl class="defs">
+						<dt>touchonly</dt>
+							<dd><em>Default: true</em> - To show sliderAccess only on touch devices</dd>
+
+						<dt>where</dt>
+							<dd><em>Default: "after"</em> - Where to place the buttons.  "after" or "before"</dd>
+
+						<dt>step</dt>
+							<dd><em>Default: inherits from slider</em> - How many units each button press increments/decrements.</dd>
+
+						<dt>upIcon</dt>
+							<dd><em>Default: "ui-icon-plus"</em> - jQueryUI theme class representing the icon to use for increment.</dd>
+
+						<dt>downIcon</dt>
+							<dd><em>Default: "ui-icon-minus"</em> - jQueryUI theme class representing the icon to use for decrement.</dd>
+
+						<dt>text</dt>
+							<dd><em>Default: false</em> - Whether to show button text.</dd>
+
+						<dt>upText</dt>
+							<dd><em>Default: "+"</em> - Text to show in the increment button.</dd>
+
+						<dt>downText</dt>
+							<dd><em>Default: "-"</em> - Text to show in the decrement button.</dd>
+
+						<dt>buttonset</dt>
+							<dd><em>Default: true</em> - Whether to use the jQueryUI Buttonset.</dd>
+
+						<dt>buttonsetTag</dt>
+							<dd><em>Default: "span"</em> - Tagname used to generate a buttonset.</dd>
+
+						<dt>speed</dt>
+							<dd><em>Default: "150"</em> - When press and hold a button, how fast it fires change.</dd>
+
+					</dl>
+				</section>
+					
+				<section>
+					<h2>Examples</h2>
+
+					<!-- ============= example -->
+					<div class="example-container">
+						<p>Add sliderAccess to a basic slider.</p>
+						<div id="basic_example_1"></div>					
+<pre>
+$('#basic_example_1').slider().sliderAccess({
+	touchonly : false
+});
+</pre>
+					</div>
+
+
+					<!-- ============= example -->
+					<div class="example-container">
+						<p>Change the position of sliderAccess.</p>
+						<div id="basic_example_2"></div>					
+<pre>
+$('#basic_example_2').slider({
+	min: 0,
+	max: 100,
+	value: 50,
+	step: 10 // sliderAccess will inherit this
+}).sliderAccess({
+	touchonly : false,
+	where: 'before'
+});
+</pre>
+					</div>
+
+					<!-- ============= example -->
+					<div class="example-container">
+						<p>Use text for the buttons</p>
+						<div id="basic_example_3"></div>					
+<pre>
+$('#basic_example_3').slider().sliderAccess({
+	touchonly : false,
+	text: true,
+	upText: 'More',
+	downText: 'Less'
+});
+</pre>
+					</div>
+				</section>
+				
+	 	</div>
+	 	<script type="text/javascript"> /*
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		*/</script> 
+		<script type="text/javascript"> /*
+		try {
+		var pageTracker = _gat._getTracker("UA-7602218-1");
+		pageTracker._trackPageview();
+		} catch(err) {}*/</script>
+	</body> 
+</html>
