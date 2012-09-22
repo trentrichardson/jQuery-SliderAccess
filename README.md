@@ -9,7 +9,7 @@ About
 
 Use
 ---
-- To use this plugin you must include jQuery and jQuery UI with Slider wigit
+- To use this plugin you must include jQuery and jQuery UI with Slider and Button wigit
 - Include sliderAccess script
 - now use sliderAccess with $('#selector').slider().sliderAccess()
 
