@@ -4,7 +4,7 @@ jQuery SliderAccess
 About
 -----
 - Author: [Trent Richardson](http://trentrichardson.com)
-- Documentation: [http://trentrichardson.com/2011/11/11/jquery-ui-sliders-and-touch-accessibility/](http://trentrichardson.com/2011/11/11/jquery-ui-sliders-and-touch-accessibility/)
+- Documentation: [http://trentrichardson.com/examples/jQuery-SliderAccess/](http://trentrichardson.com/examples/jQuery-SliderAccess/)
 - Twitter: [@practicalweb](http://twitter.com/practicalweb)
 
 Use
